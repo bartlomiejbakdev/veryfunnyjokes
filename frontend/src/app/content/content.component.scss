@@ -1,0 +1,21 @@
+.column1 {
+  float: left;
+  width: 70%;
+}
+.column2 {
+  float: left;
+  width: 30%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row{
+  background-color: black;
+  height: 100%;
+  color: yellow;
+  font-family: 'Abel', sans-serif;
+}

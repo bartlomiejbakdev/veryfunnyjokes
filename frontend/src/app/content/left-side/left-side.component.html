@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="joke" *ngFor="let joke of httpService.listJokes">
+    <mat-card class="card">
+
+      <mat-card-title>{{joke.title}}</mat-card-title>
+      <mat-card-subtitle>by {{joke.creator}}</mat-card-subtitle>
+      <mat-card-content>
+        <p>
+          {{joke.content}}
+        </p>
+      </mat-card-content>
+      <br>
+      <div class="row">
+        <div class="box1">Votes: {{joke.votes}}</div>
+        <div class="box2">
+          <button>Funny</button>
+          <button>Not Funny</button>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>
