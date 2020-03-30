@@ -1,9 +1,8 @@
 <div class="container">
   <div class="joke" *ngFor="let joke of httpService.listJokes">
+    <h1>{{joke.title}}</h1>
+    <h2>by {{joke.creator}}</h2>
     <mat-card class="card">
-
-      <mat-card-title>{{joke.title}}</mat-card-title>
-      <mat-card-subtitle>by {{joke.creator}}</mat-card-subtitle>
       <mat-card-content>
         <p>
           {{joke.content}}
@@ -11,10 +10,11 @@
       </mat-card-content>
       <br>
       <div class="row">
-        <div class="box1">Votes: {{joke.votes}}</div>
+        <div class="box1">Upvotes: {{joke.upVotes}}</div>
+        <div class="box1">Downvotes: {{joke.downVotes}}</div>
         <div class="box2">
-          <button>Funny</button>
-          <button>Not Funny</button>
+          <button (click)="funny(joke.id)">Funny</button>
+          <button (click)="notFunny(joke.id)">Not Funny</button>
         </div>
       </div>
     </mat-card>
