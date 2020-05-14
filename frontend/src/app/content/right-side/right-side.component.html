@@ -1,1 +1,21 @@
-<p>right-side works!</p>
+<div class="container">
+
+  <h1>The best joke</h1>
+  <mat-card class="card">
+
+    <div class="row" *ngFor="let best of this.bestJokes; index as i">
+      <p>{{i + 1}}. {{best.title}} Up Votes: {{best.upVotes}}</p>
+    </div>
+  </mat-card>
+</div>
+
+<div class="container">
+
+  <h1>Worst joke</h1>
+  <mat-card class="card">
+
+    <div class="row" *ngFor="let worst of this.worstJokes; index as i">
+      <p>{{i + 1}}. {{worst.title}} Down Votes: {{worst.downVotes}}</p>
+    </div>
+  </mat-card>
+</div>

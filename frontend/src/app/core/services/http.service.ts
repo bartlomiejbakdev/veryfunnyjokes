@@ -6,6 +6,7 @@ import {Joke} from '../interfaces/joke';
 })
 export class HttpService {
 
+
   public listJokes: Array<Joke> = [
     {
       id: 0,
@@ -42,4 +43,6 @@ export class HttpService {
 
   constructor() {
   }
+
+
 }

@@ -1,0 +1,55 @@
+.container {
+  margin: 150px;
+  padding-left: 100px;
+  font-family: 'Abel', sans-serif;
+}
+
+h1{
+  font-family: 'Abel', sans-serif;
+  font-size: 30px;
+  letter-spacing: 5px;
+}
+
+h2{
+  font-family: 'Abel', sans-serif;
+  font-size: 20px;
+}
+
+.joke{
+  padding-bottom: 50px;
+}
+
+mat-card{
+  background-color: yellow;
+  font-family: 'Abel', sans-serif;
+}
+
+.card {
+  max-width: 900px;
+}
+
+mat-card-title{
+  font-size: 30px;
+  letter-spacing: 5px;
+}
+
+p{
+  font-size: 20px;
+}
+
+.row {
+  padding-bottom: 20px;
+}
+
+.box1 {
+  display: inline-block;
+  float: left;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.box2 {
+  display: inline-block;
+  float: right;
+}
+

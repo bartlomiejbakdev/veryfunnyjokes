@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpService} from '../../core/services/http.service';
 import {Joke} from '../../core/interfaces/joke';
+import {CountTheVotesService} from '../../core/services/count-the-votes.service';
 
 @Component({
   selector: 'app-left-side',
@@ -10,18 +11,18 @@ import {Joke} from '../../core/interfaces/joke';
 export class LeftSideComponent implements OnInit {
 
 
-
-  constructor(public httpService: HttpService) {
+  constructor(public httpService: HttpService, private countTheVotesService: CountTheVotesService) {
   }
 
   ngOnInit(): void {
   }
 
   funny(id) {
-    this.httpService.listJokes[id].upVotes = this.httpService.listJokes[id].upVotes + 1;
+    this.countTheVotesService.funny(id);
   }
+
   notFunny(id) {
-    this.httpService.listJokes[id].downVotes = this.httpService.listJokes[id].downVotes + 1;
+    this.countTheVotesService.notFunny(id);
   }
 
 
